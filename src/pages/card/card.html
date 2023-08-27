@@ -1,0 +1,67 @@
+<ion-content class="card">
+  <h3 class="title" *ngIf="cartItems != null && cartItems.length > 0">
+    {{ cartItems.length }} items in cart
+  </h3>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of cartItems">
+      <ion-item>
+        <div class="cart-item">
+          <div class="image">
+            <img src="{{item.image}}">
+          </div>
+          <div class="description">
+            <h3>{{item.name}}</h3>
+            <p>{{item.price}}.00 TND/day</p>
+          </div>
+          <div class="action">
+            <ion-buttons>
+              <button (click)="increase(item)">
+                <ion-icon name="add"></ion-icon>
+              </button>
+            </ion-buttons>
+            <div class="counter"><p>{{item.quantity}}</p></div>
+            <ion-buttons>
+              <button (click)="decrease(item)">
+                <ion-icon name="remove"></ion-icon>
+              </button>
+            </ion-buttons>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <button ion-button color="danger" (click)="removeFromCart(item)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <div class="empty-cart" *ngIf="cartItems == null || cartItems.length == 0">
+    <ion-icon name="cart"></ion-icon>
+    <p>Your cart is empty</p>
+  </div>
+
+  <button class="buttons" *ngIf="cartItems.length" (click)="goOrder()">
+    Total: {{ getTotalAmount() }} TND/per day
+  </button>
+
+
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="bar">
+      <button class="btn">
+        <ion-icon name="home" (click)="goHome()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="search" (click)="goSearch()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="cart" (click)="goCard()"></ion-icon>
+      </button>
+      
+      <button class="btn">
+        <ion-icon name="person" (click)="goPerson()"></ion-icon>
+      </button>
+  </ion-toolbar>
+</ion-footer>

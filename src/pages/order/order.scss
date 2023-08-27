@@ -1,0 +1,114 @@
+ion-content.order{
+  background-color: #b0b2b8;
+  .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0.5rem;
+  
+      button {
+        height: 60px;
+        width: 60px;
+        color: #000;
+        background-color: #b0b2b8;
+        
+  
+        ion-icon {
+          font-size: 2rem;
+          color: #000;
+        }
+        &.activated{
+            background-color: #b0b2b8;
+        }
+      }
+ 
+    }
+    .login-section{
+      height: 85vh;
+      width: 100%;
+      max-width: 500px;
+      background: #fff;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      position: fixed;
+      margin: auto;
+      border-top-left-radius: 46px;
+      border-top-right-radius: 46px;
+  
+      .heading{
+          margin-top: 40px;
+          margin-left: 60px;
+  
+          h1{
+              font-size: 3rem;
+              font-weight: bolder;
+          }
+          p{
+              margin-top: 20px;
+              font-size: 1.5rem;
+              color: #7b7b7b;
+          }
+      }
+      .login-form{
+          .form-input{
+              position: relative;
+              margin-bottom: 10px;
+              margin-left: 20px;
+              ion-item:part(native){
+                  padding-left: 0;
+              }
+              ion-icon{
+                  position: absolute;
+                  top: 15px;
+                  z-index: 2;
+                  font-size: 2rem;
+                  left: 5px;
+              }
+              ion-label{
+                  position: absolute;
+                  margin-left: 35px;
+                  font-weight: bolder;
+                  font-size: 1.4rem;
+                  top: 3px;
+              }
+              ion-input{
+                  font-size: 1.2rem;
+                  padding-block-start: 100px;
+                  padding-top: 30px;
+                  color: #212121;
+  
+              }
+          }
+      }
+      .action-button{
+          text-align: center;
+          .login-button{
+              background: #f9b801;
+              font-weight: bold;
+              font-size:  15px;
+              margin-top: 13px;
+              border-radius: 8px;
+              padding: 15px 60px 15px 60px;
+          }
+      }
+      .signup-button{
+          display: flex;
+          margin-top: 30px;
+          margin-left: 180px;
+          p{
+              margin-top: 15px;
+              font-size: 1.3rem;
+              color: #212121; 
+           }
+          a{
+              margin-top: 13px;
+              margin-left: 10px;
+              text-decoration: underline;
+              color: #212121;
+          }
+          
+      }
+      
+  
+  }
+}

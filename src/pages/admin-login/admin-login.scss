@@ -1,0 +1,21 @@
+ion-content .admin-login{
+  page-login {
+
+    .login-button-container {
+      margin-top: 20px;
+    }
+  
+  
+    button {
+      background-color: #3880ff !important;
+      border-color: #3880ff !important;
+      color: #fff !important;
+  
+      &:hover {
+        background-color: #3171e0 !important;
+        border-color: #3171e0 !important;
+      }
+    }
+  }
+}
+

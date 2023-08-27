@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cars List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="updatecar">
+  <ion-list scrollable>
+    <button ion-item *ngFor="let car of cars" (click)="updateCar(car)">
+      <ion-avatar item-start>
+        <img src="{{car.image}}">
+      </ion-avatar>
+      <h2>{{car.name}}</h2>
+      <p>{{car.id}}</p>
+      <p>{{car.price | currency:'USD':'symbol'}}</p>
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <button ion-button ion-back-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Add a car</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="addcar">
+  <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Immatricule</ion-label>
+        <ion-input type="number" formControlName="id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-input type="number" formControlName="price"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Categorie</ion-label>
+        <ion-input type="text" formControlName="categorie"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Boite</ion-label>
+        <ion-input type="text" formControlName="boite"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Clim</ion-label>
+        <ion-input type="text" formControlName="clim"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nbplace</ion-label>
+        <ion-input type="number" formControlName="nbplace"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nbporte</ion-label>
+        <ion-input type="number" formControlName="nbporte"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Capacitebg</ion-label>
+        <ion-input type="number" formControlName="capacitebg"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Age</ion-label>
+        <ion-input type="number" formControlName="age"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Permis</ion-label>
+        <ion-input type="number" formControlName="permis"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image</ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Bg</ion-label>
+        <ion-input type="text" formControlName="bg"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Quantity</ion-label>
+        <ion-input type="number" formControlName="quantity"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="invalid-feedback" *ngIf="showError">
+     {{errorMessage}}
+    </div>
+    <div class="ion-padding">
+    <button ion-button type="submit"  (click)="onSubmit()">Add Car</button>
+    </div> </form>
+</ion-content>

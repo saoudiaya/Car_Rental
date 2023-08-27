@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Users stats</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="user">
+  <ion-list>
+    <ion-item>
+      <ion-label>Total Users: <b>{{ totalUsers }}</b>
+      </ion-label>
+      <ion-badge slot="end"></ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Average Phone Number Length: <b> {{ averagePhoneNumberLength }}</b></ion-label>
+      <ion-badge slot="end"></ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Most Common Address:  <b>{{ mostCommonAddress }}</b></ion-label>
+      <ion-badge slot="end"></ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Most Common First Letter of Names: <b> {{ mostCommonFirstLetterOfName }}</b></ion-label>
+      <ion-badge slot="end"></ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

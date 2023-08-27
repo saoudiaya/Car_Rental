@@ -1,0 +1,142 @@
+ion-content.details {
+    background-color: #b0b2b8 ;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0.5rem;
+  
+      button {
+        height: 60px;
+        width: 60px;
+        color: #000;
+        background-color: #b0b2b8;
+        
+  
+        ion-icon {
+          font-size: 2rem;
+          color: #000;
+        }
+        &.activated{
+            background-color: #b0b2b8;
+        }
+      }
+ 
+    }
+
+    .card{
+        height: 90%;
+        width: 100%;
+        background: #fff;
+        position: relative;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0;
+        padding: 2rem;
+        .image{
+            position:absolute ;
+            top: -8rem;
+            width: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+            .card-title{
+                margin-top: 20%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h1{
+                    font-weight: 700;
+                    font-size: 2.1rem;
+
+                }
+               
+
+                p{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+
+                }
+
+
+            }
+            h5{
+                margin-top: 0;
+                font-weight: 100;
+                font-size: 1.7rem;
+                margin-bottom: 2.7rem;
+
+            }
+            .content {
+                display: flex;
+                justify-content: center;
+              }
+              
+              .content .icons {
+                background: #f3f3f3;
+                padding: 1.5rem;
+                border-radius: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+                position: absolute;
+              }
+              
+              .content .icons > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+              }
+              
+              .content .icons .icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 20%;
+                margin-right: 5px;
+                object-fit: cover;
+              }
+              
+              .content .icons .icon span {
+                font-weight: bold !important;
+                margin-left: 10px;
+              }
+              
+              
+           
+              
+
+    }
+
+    .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 73%;
+      width: 100%;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 0 0 3rem 3rem;
+      font-weight: 100;
+      text-align: justify;
+    
+    }
+    .add{
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      top: 90%;
+      box-shadow: none;
+      border-radius: 1.8rem;
+      background:#f9b801;
+      text-transform: initial;
+      font-size: 1.8rem;
+      font-weight: 600;
+      height: 50px;
+      width: 50%;
+      color: #000;
+    }
+  }
+  

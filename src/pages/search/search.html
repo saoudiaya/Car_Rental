@@ -1,0 +1,58 @@
+<ion-content class="search">
+  <div class="search">
+    <ion-input placeholder="Search something ..." [(ngModel)]="filterTerm"></ion-input>
+    <ion-icon name="search"></ion-icon>
+  </div>
+
+  <div class="favorites">
+
+    <ion-card *ngFor="let fav of favorites | filter:filterTerm" (click)="goToDetail(fav?.id)">
+      <h1 style="font-weight: bold; margin-left: 80px; margin-top: 5px;">Best Seller</h1>
+      <img [src]="fav?.image">
+      <ion-card-header>
+        <ion-card-title>{{fav?.name}}</ion-card-title>
+        <p>{{fav?.price}} TND/day</p>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-icon name="car"><p>{{fav?.boite}}</p></ion-icon>
+
+        <ion-icon name="snow"><p>{{fav?.clim}}</p></ion-icon>
+
+        <ion-icon name="people"><p>{{fav?.nbplace}}</p></ion-icon>
+
+        <ion-icon name="open"><p>{{fav?.nbporte}}</p></ion-icon>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+    <ion-list>
+      <ion-item *ngFor="let data of cars | filter:filterTerm" (click)="goToDetail(data?.id)">
+        <ion-thumbnail item-start>
+          <img src="{{data?.bg}}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{data?.name}}</h2>
+          <p>{{data?.price}} TND/day</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="footer">
+    <ion-toolbar class="bar">
+        <button class="btn">
+          <ion-icon name="home" (click)="goHome()"></ion-icon>
+        </button>
+        <button class="btn">
+          <ion-icon name="search" (click)="goSearch()"></ion-icon>
+        </button>
+        <button class="btn">
+          <ion-icon name="cart" (click)="goCard()"></ion-icon>
+        </button>
+        
+        <button class="btn">
+          <ion-icon name="person" (click)="goPerson()"></ion-icon>
+        </button>
+    </ion-toolbar>
+  </ion-footer>

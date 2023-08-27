@@ -1,0 +1,45 @@
+<ion-content class="order">
+  <div class="header">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+  
+    <div class="login-section ion-padding">
+      <div class="heading ion-padding">
+        <h1>Rent Cars</h1>
+        <p>Start a Reservation</p>
+      </div>
+      <div class="login-form ion-padding">
+        <div class="form-input">
+          <ion-icon name="calendar" style="color: black;"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">Start time</ion-label>
+            <ion-input type="date" [(ngModel)]="order.starttime"></ion-input>
+          </ion-item>
+        </div>
+        <div class="form-input">
+          <ion-icon name="calendar" style="color: black;"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">End time</ion-label>
+            <ion-input type="date" [(ngModel)]="order.endtime"></ion-input>
+          </ion-item>
+        </div>
+        <div class="form-input">
+          <ion-icon name="pin" style="color: black;"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">Place pick-up</ion-label>
+            <ion-input type="text" [(ngModel)]="order.placepickup"></ion-input>
+          </ion-item>
+        </div>
+      <div class="action-button ion-padding">
+        <button class="login-button" [disabled]="order.starttime == '' || order.endtime == '' || order.placepickup == ''" (click)="orders()">Validate</button>
+      </div>
+      
+  
+    </div>
+  </div>
+
+</ion-content>

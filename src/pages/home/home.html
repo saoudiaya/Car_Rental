@@ -1,0 +1,103 @@
+<ion-content class="home">
+
+
+  <div class="header">
+    <h1>Rent Car</h1>
+    <div class="avatar">
+      <img ion-img src="assets/imgs/user.png"/>
+    </div>
+  </div>
+
+  <div class="search">
+    <ion-input placeholder="Search something..."></ion-input>
+    <ion-icon name="search"></ion-icon>
+  </div>
+
+  <div class="tabs">
+    <div class="alea">
+      <div class="avatar">
+        <img ion-img src="assets/imgs/car.jpg">
+      </div>
+      <h3>Car</h3>
+    </div>
+    <div class="alea">
+      <div class="avatar">
+        <img ion-img src="assets/imgs/luxe.jpg">
+      </div>
+      <h3>Luxe</h3>
+    </div>
+    <div class="alea">
+      <div class="avatar">
+        <img ion-img src="assets/imgs/porsche.jpg">
+      </div>
+      <h3>Sport</h3>
+    </div>
+    <div class="alea">
+      <div class="avatar">
+        <img ion-img src="assets/imgs/bus.jpg">
+      </div>
+      <h3>Van Car</h3>
+    </div>
+  </div>
+
+  <h2 class="text">Popular</h2>
+
+  <div class="packages">
+    <div class="card" *ngFor="let package of packages" (click)="goToDetail(package?.id)"
+         [ngStyle]="{'background-image': 'linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0.2)50%, rgba(0,0,0,0.95) 100% ),
+  url('+ package?.image +')'}">
+      <div class="info">
+        <h2>{{package?.name}}</h2>
+        <p><ion-icon name="pricetag"></ion-icon>  {{package?.price}} DT/per day  </p>
+      </div>
+
+    </div>
+  </div>
+  <h2 class="text">Recommended</h2>
+
+  <div class="cart-item" *ngFor="let car of cars" (click)="goToDetail(car?.id)">
+
+
+    <div class="description">
+      <h3>{{car?.name}}</h3>
+      <h6>Categorie : {{car?.categorie}}</h6>
+      <div class="image">
+        <img ion-img [src]="car.image"/>
+      </div>
+      <div class="content">
+        <div class="icons">
+          <div><img class="icon" src="/assets/imgs/gearbox.png"/>  {{car?.boite}}   </div>
+          <div><img class="icon" src="/assets/imgs/people.png"/>  {{car?.nbplace}}   </div>
+        </div>
+        <div class="icons">
+          <div><img class="icon" src="/assets/imgs/snowflake.png"/>  {{car?.clim}}   </div>
+          <div><img class="icon" src="/assets/imgs/doorcar.png"/>  {{car?.nbporte}}   </div>
+        </div>
+      </div>
+
+
+      <p><ion-icon name="pricetag"></ion-icon>  {{car?.price}} DT/per day  </p>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="bar">
+      <button class="btn">
+        <ion-icon name="home" (click)="goHome()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="search" (click)="goSearch()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="cart" (click)="goCard()"></ion-icon>
+      </button>
+      
+      <button class="btn">
+        <ion-icon name="person" (click)="goPerson()"></ion-icon>
+      </button>
+  </ion-toolbar>
+</ion-footer>
+
+

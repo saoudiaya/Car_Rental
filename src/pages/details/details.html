@@ -1,0 +1,59 @@
+<ion-content class="details">
+  <div class="header">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+
+
+  <div class="card">
+    <div class="image">
+      <img ion-img [src]="car?.image"/>
+     </div>
+
+     <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">
+          {{car?.name}}
+          <br>
+        </h1>
+        <p class="ion-no-margin">
+              {{car?.price}} DT/per Day
+        </p>
+
+
+      </div>
+      <h5 class="ion-no-margin" style="display: block;">
+        Categorie: {{car?.categorie}}
+       </h5>
+      <div class="content">
+        <div class="icons">
+          <div><img class="icon" src="/assets/imgs/calendar.png"/> <span style="font-weight: bold;"> Date de mise en circulation : </span>  {{car?.date}}  </div>
+         <div><img class="icon" src="/assets/imgs/gearbox.png"/> <span style="font-weight: bold;"> Type de la Boite : </span>  {{car?.boite == 'M' ? ' Manuelle' : ' Automatique'}}  </div>
+         <div><img class="icon" src="/assets/imgs/people.png"/> <span style="font-weight: bold;"> Nombre des Places : </span> {{car?.nbplace}} places  </div>
+         <div><img class="icon" src="/assets/imgs/snowflake.png"/> <span style="font-weight: bold;">Climatisation : </span> {{car?.clim == 'A/C' ? ' Air-Conditioning' : 'no'}}   </div>
+         <div><img class="icon" src="/assets/imgs/doorcar.png"/> <span style="font-weight: bold;">Nombre des places : </span> {{car?.nbporte}} portes  </div>
+         <div><img class="icon" src="/assets/imgs/luggage.png"/> <span style="font-weight: bold;"> Capacité bagages : </span>  {{car?.capacitebg}} valises  </div>
+         <div><img class="icon" src="/assets/imgs/age.png"/> <span style="font-weight: bold;"> Age Minimum : </span>  {{car?.age}} ans  </div>
+         <div><img class="icon" src="/assets/imgs/drive.png"/> <span style="font-weight: bold;"> Possession du permis Minimum : </span>  {{car?.permis}} ans  </div>
+        </div>
+      </div>
+      <p class="description"><span style="font-weight: bold; font-size: 1.7rem;">Description</span> <br>
+      {{car?.description}}
+      </p>
+
+      <button ion-button expand="block" class="add" (click)="gocard(car?.id)">
+        Add to cart
+      </button>
+
+     </div>
+
+
+  </div>
+
+
+
+
+</ion-content>

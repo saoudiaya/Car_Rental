@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <button ion-button ion-back-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Remove a car</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="removecar">
+  <ion-list lines="full">
+    <ion-item *ngFor="let car of cars" button (click)="deleteCar(car)">
+      <ion-icon slot="start" name="car"></ion-icon>
+      <ion-label>
+        <h2>{{ car.name }}</h2>
+        <p>{{ car.id }}</p>
+        <p>Price: {{ car.price }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

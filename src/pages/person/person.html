@@ -1,0 +1,57 @@
+<ion-content class="person">
+
+  <ion-avatar>
+    <img src="/assets/imgs/woman.png" alt="">
+  </ion-avatar>
+  <ion-label class="name">Foulen Ben Foulen</ion-label>
+
+  <div class="login-form ion-padding">
+    <div class="form-input">
+      <ion-icon class="lock-icon" name="person" style="color: black;"></ion-icon>
+      <ion-item>
+        <ion-label position="floating">Name: Foulen Ben Foulen</ion-label>
+      </ion-item>
+    </div>
+    <div class="form-input">
+      <ion-icon class="lock-icon" name="pin" style="color: black;"></ion-icon>
+      <ion-item>
+        <ion-label position="floating">Address: Ariana</ion-label>
+      </ion-item>
+    </div>
+    <div class="form-input">
+      <ion-icon class="lock-icon" name="call" style="color: black;"></ion-icon>
+      <ion-item>
+        <ion-label position="floating">Phone Number: 51139545</ion-label>
+      </ion-item>
+    </div>
+    <div class="form-input">
+      <ion-icon class="lock-icon" name="mail" style="color: black;"></ion-icon>
+      <ion-item>
+        <ion-label position="floating">Email: foulen@gmail.com</ion-label>
+      </ion-item>
+    </div>
+    </div>
+
+  <div class="action-button ion-padding">
+    <button class="login-button" (click)="goLogin()">Logout</button>
+  </div>
+
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="bar">
+      <button class="btn">
+        <ion-icon name="home" (click)="goHome()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="search" (click)="goSearch()"></ion-icon>
+      </button>
+      <button class="btn">
+        <ion-icon name="cart" (click)="goCard()"></ion-icon>
+      </button>
+      
+      <button class="btn">
+        <ion-icon name="person" (click)="goPerson()"></ion-icon>
+      </button>
+  </ion-toolbar>
+</ion-footer>

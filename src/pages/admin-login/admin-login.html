@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="admin-login" padding>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]="mail" name="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+<p *ngIf="showError"> error </p>
+    <div class="login-button-container">
+      <button ion-button color="primary" block (click)="login()">Login</button>
+    </div>
+  </form>
+</ion-content>
